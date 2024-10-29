@@ -16,7 +16,7 @@ const MenuPage = () => {
   if (!menuData) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-[url('/background-texture.jpg')] bg-cover bg-center text-gray-800 p-4">
+    <div className="min-h-screen bg-[url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/background-texture.webp')] bg-cover bg-center text-gray-800 p-4">
       <div className="max-w-6xl mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
         <h1 className="text-5xl font-extrabold text-center text-red-600 mb-10">
           Our Pizza Menu
