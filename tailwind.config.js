@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        maven: ['"Maven Pro"', "sans-serif"],
+        edu: ['"Edu AU VIC WA NT Guides"', "sans-serif"],
       },
     },
   },

@@ -11,7 +11,9 @@ const MenuPage = () => {
 
   // Initialize all categories as collapsed in useEffect after fetching data
   useEffect(() => {
-    fetch("/menuData.json")
+    fetch(
+      "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/main/public/menuData.json"
+    )
       .then((res) => res.json())
       .then((data) => {
         setMenuData(data);
@@ -55,7 +57,7 @@ const MenuPage = () => {
         <div className="relative bg-white bg-opacity-90 p-8 rounded-lg shadow-lg ml-12">
           {/* Adjust `ml-12` for spacing */}
           <h1 className="text-4xl font-extrabold text-center text-red-600 mb-10">
-            Drikkemenu
+            Menukort
           </h1>
           {menuData.categories.map((category) => (
             <div key={category.name} className="mb-12">

@@ -10,7 +10,9 @@ const DrikkeMenuPage = () => {
 
   useEffect(() => {
     // Fetch menu data
-    fetch("/drikkeMenuData.json")
+    fetch(
+      "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/main/public/drikkeMenuData.json"
+    )
       .then((res) => res.json())
       .then((data) => setMenuData(data));
 
@@ -27,9 +29,10 @@ const DrikkeMenuPage = () => {
   return (
     <div className="min-h-screen bg-[url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/background-texture.png')] bg-cover bg-center text-gray-800 p-4">
       <div className="max-w-6xl mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
-        <h1 className="text-5xl font-extrabold text-center text-red-600 mb-10">
-          Mad Menukort
+        <h1 className="text-5xl font-extrabold text-center text-red-600 mb-10 font-maven">
+          Menukort
         </h1>
+
         {menuData.categories.map((category) => (
           <div key={category.name} className="mb-12">
             {/* Category Title */}
