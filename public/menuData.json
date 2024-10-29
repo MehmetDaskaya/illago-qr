@@ -18,6 +18,11 @@
           "name": "Dansker Pizza",
           "ingredients": ["Tomatsauce", "Ost", "Skinke", "Oregano"],
           "price": 70.0
+        },
+        {
+          "name": "Hawaii Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Skinke", "Ananas"],
+          "price": 75.0
         }
       ]
     },
@@ -26,12 +31,12 @@
       "image": "https://via.placeholder.com/600x300?text=Salat+Pizza",
       "items": [
         {
-          "name": "Hawaii Pizza",
-          "ingredients": ["Tomatsauce", "Ost", "Skinke", "Ananas"],
+          "name": "Kylling Salat Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Kylling", "Salat"],
           "price": 75.0
         },
         {
-          "name": "Kebab Pizza",
+          "name": "Kebab Salat Pizza",
           "ingredients": ["Tomatsauce", "Ost", "Kebab", "Salat"],
           "price": 80.0
         }

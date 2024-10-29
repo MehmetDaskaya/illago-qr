@@ -7,49 +7,89 @@ import MenuItemBox from "../components/MenuItemBox";
 const MenuPage = () => {
   const [menuData, setMenuData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [collapsedCategories, setCollapsedCategories] = useState({});
 
+  // Initialize all categories as collapsed in useEffect after fetching data
   useEffect(() => {
-    // Fetch menu data
     fetch("/menuData.json")
       .then((res) => res.json())
-      .then((data) => setMenuData(data));
+      .then((data) => {
+        setMenuData(data);
+        // Set all categories as collapsed initially
+        const initialCollapsedState = data.categories.reduce(
+          (acc, category) => {
+            acc[category.name] = true;
+            return acc;
+          },
+          {}
+        );
+        setCollapsedCategories(initialCollapsedState);
+      });
 
-    // Set a timeout to control loading display
     const timer = setTimeout(() => setIsLoading(false), 2000);
-
-    // Cleanup timer on component unmount
     return () => clearTimeout(timer);
   }, []);
 
-  // Show the loading component for at least 2 seconds
+  // Toggle function for collapsing categories
+  const toggleCategory = (categoryName) => {
+    setCollapsedCategories((prevState) => ({
+      ...prevState,
+      [categoryName]: !prevState[categoryName],
+    }));
+  };
+
   if (isLoading || !menuData) return <Loading />;
 
   return (
     <div className="min-h-screen bg-[url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/background-texture.png')] bg-cover bg-center text-gray-800 p-4">
-      <div className="max-w-6xl mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
-        <h1 className="text-5xl font-extrabold text-center text-red-600 mb-10">
-          Vores Menukort
-        </h1>
-        {menuData.categories.map((category) => (
-          <div key={category.name} className="mb-12">
-            {/* Category Title */}
-            <h2 className="text-3xl font-bold text-green-700 mb-6">
-              {category.name}
-            </h2>
-            {/* Category Image */}
-            <img
-              src={category.image}
-              alt={category.name}
-              className="w-full h-24 object-cover rounded-lg mb-4"
-            />
-            {/* Category Items */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {category.items.map((item) => (
-                <MenuItemBox key={item.name} item={item} />
-              ))}
+      <div className="relative -left-4 max-w-6xl mx-auto">
+        {/* Spiral Background on the Left */}
+        <div
+          className="absolute -left-2 top-0 h-full w-28 bg-repeat-y z-50"
+          style={{
+            backgroundImage: "url('/book-spring.png')",
+            backgroundSize: "contain",
+          }}
+        ></div>
+
+        <div className="relative bg-white bg-opacity-90 p-8 rounded-lg shadow-lg ml-12">
+          {/* Adjust `ml-12` for spacing */}
+          <h1 className="text-4xl font-extrabold text-center text-red-600 mb-10">
+            Drikkemenu
+          </h1>
+          {menuData.categories.map((category) => (
+            <div key={category.name} className="mb-12">
+              {/* Category Title */}
+              <div
+                onClick={() => toggleCategory(category.name)}
+                className="flex items-center justify-between cursor-pointer"
+              >
+                <h2 className="text-3xl font-bold text-green-700 mb-4">
+                  {category.name}
+                </h2>
+                <span className="text-gray-500">
+                  {collapsedCategories[category.name] ? "▼" : "▲"}
+                </span>
+              </div>
+
+              {/* Category Image */}
+              <img
+                src={category.image}
+                alt={category.name}
+                className="w-full h-32 object-cover rounded-lg mb-4"
+              />
+
+              {/* Collapsible Category Items */}
+              {!collapsedCategories[category.name] && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {category.items.map((item) => (
+                    <MenuItemBox key={item.name} item={item} />
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

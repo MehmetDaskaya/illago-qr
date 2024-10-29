@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Doser",
+      "image": "https://via.placeholder.com/600x300?text=Doser",
+      "items": [
+        {
+          "name": "Faxe Kondi",
+          "price": 15
+        },
+        {
+          "name": "Pepsi",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "name": "Flaske",
+      "image": "https://via.placeholder.com/600x300?text=Flaske",
+      "items": [
+        {
+          "name": "Faxe Kondi",
+          "description": "Kun take away",
+          "price": 25
+        },
+        {
+          "name": "Pepsi",
+          "description": "Kun take away",
+          "price": 25
+        }
+      ]
+    }
+  ]
+}

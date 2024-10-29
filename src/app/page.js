@@ -24,23 +24,31 @@ export default function Home() {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen bg-[url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/background-texture.png')] bg-cover bg-center text-gray-800 p-4 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-[url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/illago-front.jpg')] bg-cover bg-center text-gray-800 p-4 flex flex-col items-center justify-center">
       {/* Hero Section */}
-      <main className="text-center max-w-xl px-6 py-12 bg-white bg-opacity-80 rounded-lg shadow-lg">
-        <h1 className="text-4xl sm:text-5xl font-bold text-blue-500 mb-4">
+      <main className="text-center max-w-2xl px-8 py-16 bg-white bg-opacity-90 rounded-xl shadow-xl">
+        <img
+          src="https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/illago-front.jpg" // Replace with the actual path to your logo image
+          alt="Cafeteria il Lago Logo"
+          className="mx-auto mb-6 w-32 h-32 object-contain" // Adjust width and height as needed
+        />
+
+        <h1 className="text-4xl sm:text-6xl font-extrabold text-blue-600 mb-6 tracking-wide">
           Velkommen til Cafeteria il Lago
         </h1>
-        <p className="text-lg sm:text-xl text-gray-700 mb-8">
-          Nyd Trekroners bedste hjemmelavede pizzaer og kebab
+        <p className=" my-16 text-xl sm:text-2xl text-gray-700  leading-relaxed">
+          Oplev den autentiske smag af hjemmelavede pizzaer og kebab i hjertet
+          af Trekroner
         </p>
-        <div className="flex flex-col">
+
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
           <Link href="/menu">
-            <div className="inline-block px-6 py-3 text-xl font-semibold text-white bg-blue-500 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+            <div className="px-8 py-3 text-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
               Se Madmenu
             </div>
           </Link>
-          <Link href="/menu">
-            <div className="inline-block px-6 py-3 text-xl font-semibold text-white bg-blue-500 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+          <Link href="/drikkemenu">
+            <div className="px-8 py-3 text-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
               Se Drikkemenu
             </div>
           </Link>
@@ -48,9 +56,10 @@ export default function Home() {
       </main>
 
       {/* Footer Section */}
-      <footer className="mt-16 w-full text-center">
-        <p className="text-sm text-gray-600">
-          © {new Date().getFullYear()} Pizzeria • All Rights Reserved
+      <footer className="mt-24 w-full text-center">
+        <p className="text-sm text-gray-500 font-light">
+          © {new Date().getFullYear()} Cafeteria il Lago • Alle rettigheder
+          forbeholdes
         </p>
       </footer>
     </div>
