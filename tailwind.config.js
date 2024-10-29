@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        maven: ['"Maven Pro"', "sans-serif"],
         edu: ['"Edu AU VIC WA NT Guides"', "sans-serif"],
+        exo: ['"Exo"', "sans-serif"],
+        maven: ['"Maven Pro"', "sans-serif"],
       },
     },
   },

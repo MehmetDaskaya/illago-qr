@@ -2,7 +2,7 @@
   "categories": [
     {
       "name": "Classic Pizza",
-      "image": "https://via.placeholder.com/600x300?text=Classic+Pizza",
+      "image": "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/1.png",
       "items": [
         {
           "name": "Funghi Pizza",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Salat Pizza",
-      "image": "https://via.placeholder.com/600x300?text=Salat+Pizza",
+      "image": "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/2.png",
       "items": [
         {
           "name": "Kylling Salat Pizza",
@@ -44,7 +44,7 @@
     },
     {
       "name": "Mexicansk Pizza",
-      "image": "https://via.placeholder.com/600x300?text=Mexicansk+Pizza",
+      "image": "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/3.png",
       "items": [
         {
           "name": "Spicy Mexicansk Pizza",
@@ -60,7 +60,7 @@
     },
     {
       "name": "Burger",
-      "image": "https://via.placeholder.com/600x300?text=Burger",
+      "image": "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/4.png",
       "items": [
         {
           "name": "Cheese Burger",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Kebab",
-      "image": "https://via.placeholder.com/600x300?text=Kebab",
+      "image": "https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/6.png",
       "items": [
         {
           "name": "Pita Kylling",

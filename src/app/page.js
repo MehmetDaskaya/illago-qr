@@ -33,22 +33,22 @@ export default function Home() {
           className="mx-auto mb-6 w-32 h-32 object-contain" // Adjust width and height as needed
         />
 
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-blue-600 mb-6 tracking-wide">
+        <h1 className="text-4xl sm:text-6xl font-edu text-blue-600 mb-6 tracking-wide">
           Velkommen til Cafeteria il Lago
         </h1>
-        <p className=" my-16 text-xl sm:text-2xl text-gray-700  leading-relaxed">
+        <p className=" my-16 text-lg font-exo sm:text-2xl text-gray-700  leading-relaxed">
           Oplev den autentiske smag af hjemmelavede pizzaer og kebab i hjertet
           af Trekroner
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
           <Link href="/menu">
-            <div className="px-8 py-3 text-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
+            <div className="px-8 py-3 text-2xl font-semibold font-exo text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
               Se Madmenu
             </div>
           </Link>
           <Link href="/drikkemenu">
-            <div className="px-8 py-3 text-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
+            <div className="px-8 py-3 text-2xl font-semibold font-exo text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
               Se Drikkemenu
             </div>
           </Link>

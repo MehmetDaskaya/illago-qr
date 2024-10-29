@@ -49,22 +49,23 @@ const MenuPage = () => {
         <div
           className="absolute -left-2 top-0 h-full w-28 bg-repeat-y z-50"
           style={{
-            backgroundImage: "url('/book-spring.png')",
+            backgroundImage:
+              "url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/book-spring.png')",
             backgroundSize: "contain",
           }}
         ></div>
 
         <div className="relative bg-white bg-opacity-90 p-8 rounded-lg shadow-lg ml-12">
           {/* Adjust `ml-12` for spacing */}
-          <h1 className="text-4xl font-extrabold text-center text-red-600 mb-10">
+          <h1 className="text-4xl font-extrabold font-edu text-center text-red-600 mb-10">
             Menukort
           </h1>
           {menuData.categories.map((category) => (
-            <div key={category.name} className="mb-12">
+            <div key={category.name} className="mb-12 ">
               {/* Category Title */}
               <div
                 onClick={() => toggleCategory(category.name)}
-                className="flex items-center justify-between cursor-pointer"
+                className="flex items-center font-edu justify-between cursor-pointer"
               >
                 <h2 className="text-3xl font-bold text-green-700 mb-4">
                   {category.name}
