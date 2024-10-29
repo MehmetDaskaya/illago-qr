@@ -1,9 +1,24 @@
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Loading from "./components/Loading/Loading";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay for demonstration purposes
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) return <Loading />;
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="min-h-screen bg-[url('https://raw.githubusercontent.com/MehmetDaskaya/illago-qr/refs/heads/main/public/background-texture.png')] bg-cover bg-center text-gray-800 p-4">
+      <main className="">
         <Link href="/menu">
           <div className="text-lg font-semibold text-blue-500 hover:underline">
             View Menu
