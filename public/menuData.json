@@ -1,53 +1,97 @@
 {
   "categories": [
     {
-      "name": "Appetizers",
+      "name": "Classic Pizza",
+      "image": "https://via.placeholder.com/600x300?text=Classic+Pizza",
       "items": [
         {
-          "name": "Bruschetta",
-          "image": "https://via.placeholder.com/150",
-          "ingredients": ["Tomatoes", "Basil", "Olive Oil", "Garlic"],
-          "price": 8.99
+          "name": "Funghi Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Champignon"],
+          "price": 60.0
         },
         {
-          "name": "Stuffed Mushrooms",
-          "image": "https://via.placeholder.com/150",
-          "ingredients": ["Mushrooms", "Cheese", "Breadcrumbs", "Garlic"],
-          "price": 7.99
+          "name": "Pepperoni Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Pepperoni"],
+          "price": 65.0
+        },
+        {
+          "name": "Dansker Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Skinke", "Oregano"],
+          "price": 70.0
         }
       ]
     },
     {
-      "name": "Main Courses",
+      "name": "Salat Pizza",
+      "image": "https://via.placeholder.com/600x300?text=Salat+Pizza",
       "items": [
         {
-          "name": "Grilled Salmon",
-          "image": "https://via.placeholder.com/150",
-          "ingredients": ["Salmon", "Lemon", "Herbs"],
-          "price": 18.99
+          "name": "Hawaii Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Skinke", "Ananas"],
+          "price": 75.0
         },
         {
-          "name": "Steak",
-          "image": "https://via.placeholder.com/150",
-          "ingredients": ["Beef", "Salt", "Pepper", "Garlic Butter"],
-          "price": 22.99
+          "name": "Kebab Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Kebab", "Salat"],
+          "price": 80.0
         }
       ]
     },
     {
-      "name": "Desserts",
+      "name": "Mexicansk Pizza",
+      "image": "https://via.placeholder.com/600x300?text=Mexicansk+Pizza",
       "items": [
         {
-          "name": "Chocolate Cake",
-          "image": "https://via.placeholder.com/150",
-          "ingredients": ["Chocolate", "Flour", "Sugar", "Eggs"],
-          "price": 6.99
+          "name": "Spicy Mexicansk Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Oksekød", "Jalapenos"],
+          "price": 85.0
         },
         {
-          "name": "Ice Cream Sundae",
-          "image": "https://via.placeholder.com/150",
-          "ingredients": ["Ice Cream", "Chocolate Syrup", "Nuts"],
-          "price": 5.99
+          "name": "Chili Pizza",
+          "ingredients": ["Tomatsauce", "Ost", "Pepperoni", "Chili"],
+          "price": 70.0
+        }
+      ]
+    },
+    {
+      "name": "Burger",
+      "image": "https://via.placeholder.com/600x300?text=Burger",
+      "items": [
+        {
+          "name": "Cheese Burger",
+          "ingredients": ["Bøf", "Ost", "Salat", "Dressing"],
+          "price": 50.0
+        },
+        {
+          "name": "Double Cheese Burger",
+          "ingredients": ["Dobbelt Bøf", "Ost", "Salat", "Dressing"],
+          "price": 70.0
+        }
+      ]
+    },
+    {
+      "name": "Kebab",
+      "image": "https://via.placeholder.com/600x300?text=Kebab",
+      "items": [
+        {
+          "name": "Pita Kylling",
+          "ingredients": ["Kylling", "Salat", "Dressing", "Pitabrød"],
+          "price": 45.0
+        },
+        {
+          "name": "Durumrulle Kylling",
+          "ingredients": ["Kylling", "Salat", "Dressing", "Durumrulle"],
+          "price": 55.0
+        },
+        {
+          "name": "Pita Doner",
+          "ingredients": ["Kebab", "Salat", "Dressing", "Pitabrød"],
+          "price": 45.0
+        },
+        {
+          "name": "Durumrulle Doner",
+          "ingredients": ["Kebab", "Salat", "Dressing", "Durumrulle"],
+          "price": 55.0
         }
       ]
     }
